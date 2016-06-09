@@ -118,7 +118,7 @@
 html {
   font-family: $primary-font-family;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: $primary-color;
 }
 
@@ -157,11 +157,12 @@ strong {
 header {
   position: fixed;
   width: 100%;
+  z-index: 9;
   .quick-contacts {
     background-color: $secondary-color;
     color: $white-color;
     padding: 0.5rem 0;
-    font-size: 90%;
+    font-size: 80%;
     text-align: right;
     .material-icons {
       display: inline;
@@ -170,7 +171,7 @@ header {
     a {
       color: $white-color;
       &:hover {
-        text-decoration: underline;
+        color: $secondary-light-color;
       }
     }
     * {
@@ -198,19 +199,40 @@ header {
           background-color: $secondary-color;
           a {
             color: $white-color;
+            .material-icons {
+              color: $secondary-light-color;
+            }
           }
         }
       }
       a {
         color: $primary-color;
         @include transition(color 0.8s);
+        .material-icons {
+          color: $secondary-color;
+        }
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
   }
 }
 
 main {
-  margin: 110px 0 2rem;
+  margin: 2rem 0;
+  .slider {
+    margin-top: 70px;
+    h3, h5 {
+      color: $white-color;
+    }
+    .indicator-item.active {
+      background-color: $secondary-color !important;
+    }
+    .btn {
+      background-color: $third-color;
+    }
+  }
 }
 /*
 main {

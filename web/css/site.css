@@ -5235,7 +5235,7 @@ input[type=range]:focus::-ms-fill-upper {
 html {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #777; }
 
 body {
@@ -5265,12 +5265,13 @@ strong {
 
 header {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 9; }
   header .quick-contacts {
     background-color: #002e65;
     color: white;
     padding: 0.5rem 0;
-    font-size: 90%;
+    font-size: 80%;
     text-align: right; }
     header .quick-contacts .material-icons {
       display: inline;
@@ -5278,7 +5279,7 @@ header {
     header .quick-contacts a {
       color: white; }
       header .quick-contacts a:hover {
-        text-decoration: underline; }
+        color: #65abff; }
     header .quick-contacts * {
       vertical-align: middle; }
   header nav {
@@ -5302,6 +5303,8 @@ header {
         background-color: #002e65; }
         header nav ul li.active a {
           color: white; }
+          header nav ul li.active a .material-icons {
+            color: #65abff; }
     header nav ul a {
       color: #777;
       -webkit-transition: color 0.8s;
@@ -5309,9 +5312,21 @@ header {
       -o-transition: color 0.8s;
       -ms-transition: color 0.8s;
       transition: color 0.8s; }
+      header nav ul a .material-icons {
+        color: #002e65; }
+      header nav ul a::first-letter {
+        text-transform: uppercase; }
 
 main {
-  margin: 110px 0 2rem; }
+  margin: 2rem 0; }
+  main .slider {
+    margin-top: 70px; }
+    main .slider h3, main .slider h5 {
+      color: white; }
+    main .slider .indicator-item.active {
+      background-color: #002e65 !important; }
+    main .slider .btn, main .slider .btn-large {
+      background-color: #e20025; }
 
 /*
 main {
