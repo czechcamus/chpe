@@ -1,0 +1,480 @@
+@charset "UTF-8";
+
+// Mixins
+@import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+@import "custom/mixins";
+
+// Variables;
+@import "components/variables";
+@import "custom/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+//@import "components/roboto";
+@import "components/typography";
+//@import "components/cards";
+//@import "components/toast";
+//@import "components/tabs";
+//@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+//@import "components/modal";
+@import "components/collapsible";
+//@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+//@import "components/carousel";
+//@import "components/date_picker/default";
+//@import "components/date_picker/default.date";
+//@import "components/date_picker/default.time";
+
+/* Preloader --- */
+
+#preloader-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  .preloader-wrapper {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -32px 0 0 -32px;
+    z-index: 1001;
+  }
+  .preloader-section {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 51%;
+    background: $grey-light-color;
+    z-index: 1000;
+    @include transform(translateY(0));
+    &.section-top {
+      top: 0;
+    }
+    &.section-bottom {
+      bottom: 0;
+    }
+  }
+}
+
+.empty {
+  * {
+    visibility: hidden;
+  }
+  #preloader-box, #preloader-box * {
+    visibility: visible;
+  }
+}
+
+.loaded {
+  #preloader-box {
+    .preloader-section {
+      @include transition(all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000));
+      &.section-top {
+        @include transform(translateY(-100%));
+      }
+      &.section-bottom {
+        @include transform(translateY(100%));
+      }
+    }
+    .preloader-wrapper {
+      opacity: 0;
+      @include transition(all 0.3s ease-out);
+    }
+    visibility: hidden;
+    @include transform(translateX(-100%));
+    @include transition(all 0.3s 1s ease-out);
+  }
+  * {
+    visibility: visible;
+  }
+}
+
+.no-js {
+  #preloader-box {
+    display: none;
+  }
+}
+
+/* Styles --- */
+
+html {
+  font-family: $primary-font-family;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: $primary-color;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+address {
+  font-style: normal;
+}
+
+h1, h2, h3, h4 {
+  color: $secondary-color;
+  font-family: $secondary-font-family;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+strong {
+  color: $black-color;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  .quick-contacts {
+    background-color: $secondary-color;
+    color: $white-color;
+    padding: 0.5rem 0;
+    font-size: 90%;
+    text-align: right;
+    .material-icons {
+      display: inline;
+      color: $secondary-light-color;
+    }
+    a {
+      color: $white-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    * {
+      vertical-align: middle;
+    }
+  }
+  nav {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12), 0 7px 10px 0 rgba(0, 0, 0, 0.08);
+    background-color: $white-color;
+    color: $secondary-color;
+    .button-collapse {
+      color: $secondary-color;
+    }
+    ul {
+      li {
+        text-transform: lowercase;
+        @include transition(background-color 0.5s);
+        &:hover {
+          background-color: $secondary-light-color;
+          a {
+            color: $white-color;
+          }
+        }
+        &.active {
+          background-color: $secondary-color;
+          a {
+            color: $white-color;
+          }
+        }
+      }
+      a {
+        color: $primary-color;
+        @include transition(color 0.8s);
+      }
+    }
+  }
+}
+
+main {
+  margin: 110px 0 2rem;
+}
+/*
+main {
+  margin: 2rem 0;
+  .carousel {
+    .carousel-item {
+      width: 350px;
+    }
+  }
+  h1 {
+    @include no-border-margin-first-letter-uppercase;
+  }
+  h3 {
+    @include no-border-margin-first-letter-uppercase;
+  }
+  .link {
+    h2 {
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .image-link {
+      display: block;
+      height: 100px;
+      line-height: 100px;
+      font-size: 100px;
+      vertical-align: middle;
+      text-align: center;
+      overflow: hidden;
+      background-position: center center;
+      background-size: 100% auto;
+      transition: background-size 0.5s;
+      .material-icons {
+        color: $white-color;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      &:hover {
+        background-position: center;
+        background-size: 120% auto;
+        .material-icons {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .btn {
+    padding: 0 1rem;
+  }
+  .bookingView {
+    padding: 1rem;
+    background-color: $third-color;
+    color: $white-color;
+    h3 {
+      color: $grey-light-color;
+      @include no-border-margin-first-letter-uppercase;
+    }
+  }
+  .bookingForm {
+    @extend .bookingView;
+    h3 {
+      text-align: center;
+    }
+    .input-field {
+      .prefix {
+        color: $grey-light-color;
+      }
+      label {
+        color: $white-color;
+      }
+    }
+    label.active {
+      color: $secondary-light-color;
+    }
+    input[type="checkbox"] + label::before {
+      border-color: $input-border-color;
+    }
+    input[type="checkbox"]:checked + label::before {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: $secondary-color;
+      border-bottom-color: $secondary-color;
+    }
+  }
+  .rightBoxView {
+    padding: 1rem;
+    background-color: $grey-lightest-color;
+    margin-top: 2rem;
+    h3 {
+      @include no-border-margin-first-letter-uppercase;
+    }
+    address {
+      margin-top: 1rem;
+      color: $third-color;
+      .material-icons {
+        color: $primary-color;
+      }
+    }
+  }
+  .collapsible-header {
+    text-transform: lowercase;
+    .material-icons {
+      color: $secondary-color;
+      &.right {
+        color: $third-color;
+      }
+    }
+  }
+  .room-header {
+    position: relative;
+    background-position: center;
+    background-size: 100%;
+    height: 10rem;
+    box-sizing: border-box;
+    border: 3px solid $secondary-color;
+    transition: border-color 0.5s;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: background-color 0.5s;
+      background-color: $white-transparent-color;
+    }
+    .material-icons {
+      position: absolute;
+      top: 3rem;
+      left: 50%;
+      margin-left: -2rem;
+      color: $white-color;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    &:hover {
+      border-color: $third-color;
+      .material-icons {
+        opacity: 1;
+      }
+      &::before {
+        background-color: transparent;
+      }
+    }
+    &.active {
+      border-color: $third-color;
+      cursor: default;
+      &::before {
+        display: none;
+      }
+      &::after {
+        position: relative;
+        bottom: -10rem;
+        margin-top: -5px;
+        left: 50%;
+        margin-left: -15px;
+        display: inline-block;
+        content: '';
+        border: 15px solid $third-color;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+      .material-icons {
+        opacity: 0;
+      }
+    }
+  }
+  .room-content {
+    &.room1, &.room2, &.room3 {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .rates {
+    color: $white-color;
+    background-color: $secondary-color;
+    tr {
+      border-bottom: 1px solid $white-transparent-color;
+      &:hover {
+        background-color: $secondary-dark-color;
+      }
+    }
+    td {
+      padding: 5px 10px;
+    }
+    .rate {
+      text-align: right;
+      strong {
+        color: inherit;
+        font-weight: 700;
+      }
+    }
+  }
+  .grey-lightest {
+    background-color: $grey-lightest-color;
+  }
+  .input-field {
+    .prefix {
+      color: $third-color;
+    }
+  }
+  input[type="checkbox"]:checked + label::before {
+    border-right-color: $third-color;
+    border-bottom-color: $third-color;
+  }
+  .picker__frame {
+    width: 370px;
+    max-width: 400px;
+  }
+  .help-block {
+    font-size: 90%;
+    color: $secondary-color;
+  }
+  .collection-item {
+    .material-icons {
+      color: $third-color;
+    }
+  }
+}
+
+footer {
+  color: $white-color;
+  background-color: $grey-color;
+  font-size: 90%;
+  a {
+    color: $white-color;
+    &:hover {
+      color: $black-color;
+    }
+  }
+}
+*/
+
+// IE 10, 11 hack
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // Flexbox emulation begin
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    display: table;
+    width: 100%;
+  }
+
+  .page-row {
+    display: table-row;
+    height: 1px;
+  }
+
+  .page-row-expanded {
+    height: 100%;
+  }
+  // Flexbox emulation end
+
+  .dropdown-button {
+    padding-right: 35px;
+    background: transparent url('#{$image-path}arrow_drop_down.png') no-repeat center right;
+    .material-icons {
+      display: none;
+    }
+  }
+}

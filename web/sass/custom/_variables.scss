@@ -1,0 +1,47 @@
+/*** Colors ***/
+$primary-color: #777;
+$primary-light-color: lighten($primary-color, 15%);
+$primary-dark-color: darken($primary-color, 15%);
+$secondary-color: #002e65;
+$secondary-dark-color: darken($secondary-color, 15%);
+$secondary-light-color: lighten($secondary-color, 50%);
+$third-color: #e20025;
+$third-light-color: lighten($third-color, 30%);
+
+$dialog-bg-color: whitesmoke;
+$dialog-border-color: color("grey", "lighten-3");
+
+$white-color: white;
+$black-color: black;
+$black-transparent-color: rgba($black-color, 0.2);
+$white-transparent-color: rgba($white-color, 0.5);
+$grey-color: color("grey", "base");
+$grey-dark-color: color("grey", "darken-2");
+$grey-light-color: color("grey", "lighten-2");
+$grey-lightest-color: color("grey", "lighten-4");
+
+/*** Button colors ***/
+$button-raised-background: $secondary-color;
+$button-raised-background-hover: lighten($button-raised-background, 5%);
+$button-background-focus: lighten($secondary-color, 4%);
+$button-raised-color: #fff;
+
+/*** Form colors ***/
+$input-focus-color: lighten($third-color, 30%);
+$input-success-color: $input-focus-color;
+$radio-fill-color: $third-color;
+$radio-empty-color: $primary-color;
+
+/*** Collection colors ***/
+$collection-link-color: $secondary-color;
+$collection-hover-bg-color: $grey-light-color;
+
+/*** Fonts ***/
+$primary-font-family: 'Source Sans Pro', sans-serif;
+$secondary-font-family: 'Ubuntu', cursive;
+
+/*** Images ***/
+$image-path: "../img/design/";
+
+/*** Forms ***/
+$radio-border: 2px solid $radio-fill-color;
