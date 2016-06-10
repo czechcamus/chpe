@@ -19,6 +19,7 @@ AppAsset::register( $this );
 	<meta name="keywords" content="kogenerace, trigenerace, orc, poradenství, energetika, realizace, analýza">
 	<?= Html::csrfMetaTags() ?>
 	<title><?= Html::encode( $this->title ) ?></title>
+	<link rel="shortcut icon" href="<?= Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
 	<?php $this->head() ?>
 </head>
 <body class="empty">

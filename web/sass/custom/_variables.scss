@@ -21,7 +21,7 @@ $grey-light-color: color("grey", "lighten-2");
 $grey-lightest-color: color("grey", "lighten-4");
 
 /*** Button colors ***/
-$button-raised-background: $secondary-color;
+$button-raised-background: $third-color;
 $button-raised-background-hover: lighten($button-raised-background, 5%);
 $button-background-focus: lighten($secondary-color, 4%);
 $button-raised-color: #fff;
