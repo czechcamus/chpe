@@ -59,17 +59,17 @@
   }
   .preloader-section {
     position: fixed;
-    left: 0;
-    width: 100%;
-    height: 51%;
-    background: $grey-light-color;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: $secondary-color;
     z-index: 1000;
-    @include transform(translateY(0));
-    &.section-top {
-      top: 0;
+    @include transform(translateX(0));
+    &.section-left {
+      left: 0;
     }
-    &.section-bottom {
-      bottom: 0;
+    &.section-right {
+      right: 0;
     }
   }
 }
@@ -87,11 +87,11 @@
   #preloader-box {
     .preloader-section {
       @include transition(all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000));
-      &.section-top {
-        @include transform(translateY(-100%));
+      &.section-left {
+        @include transform(translateX(-100%));
       }
-      &.section-bottom {
-        @include transform(translateY(100%));
+      &.section-right {
+        @include transform(translateX(100%));
       }
     }
     .preloader-wrapper {
@@ -99,7 +99,7 @@
       @include transition(all 0.3s ease-out);
     }
     visibility: hidden;
-    @include transform(translateX(-100%));
+    @include transform(translateY(-100%));
     @include transition(all 0.3s 1s ease-out);
   }
   * {
@@ -216,6 +216,25 @@ header {
         }
       }
     }
+    .side-nav {
+      .active {
+        background-color: $secondary-color;
+      }
+    }
+    .dropdown-content {
+      li {
+        background-color: $white-color;
+        &:hover {
+          background-color: $secondary-light-color;
+        }
+        a {
+          color: $secondary-color;
+          &:hover {
+            color: $white-color;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -261,6 +280,12 @@ main {
         background-color: $third-color;
       }
     }
+    .why {
+      @include animation-delay(0.3s);
+    }
+    .what {
+      @include animation-delay(0.6s);
+    }
   }
   .contacts {
     padding: 3rem 0;
@@ -274,8 +299,15 @@ main {
       padding: 0.5rem 1rem;
       background-color: $white-color;
     }
+    .form {
+      @include animation-delay(0.3s);
+    }
+    .address {
+      @include animation-delay(0.6s);
+    }
   }
 }
+
 footer {
   font-size: 90%;
   a {
@@ -284,6 +316,10 @@ footer {
       color: $black-color;
     }
   }
+}
+
+#sidenav-overlay {
+  left: 240px;
 }
 
 // IE 10, 11 hack

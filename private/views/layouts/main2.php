@@ -6,7 +6,6 @@
 use raoul2000\widget\scrollup\Scrollup;
 use yii\helpers\Html;
 use app\assets\AppAsset;
-use yii\widgets\Menu;
 
 AppAsset::register( $this );
 ?>
@@ -67,66 +66,9 @@ AppAsset::register( $this );
 					]), Yii::$app->homeUrl, [
 						'class' => 'brand-logo'
 					]
-				);
-				echo Html::a('<i class="material-icons">menu</i>', '#', [
-						'class' => 'button-collapse',
-						'data-activates' => 'mobile-navigation'
-					]);
-
-				for ( $i = 1; $i <= 2; $i ++ ) {
-					${'items' . $i} = [
-						[ 'label' => 'úvod', 'url' => [ '/site/index' ] ],
-						[
-							'label'           => 'technologie <i class="material-icons right">arrow_drop_down</i>',
-							'url'             => '#!',
-							'submenuTemplate' => "\n<ul id='technologies-menu-items" . $i . "' class='dropdown-content'>\n{items}\n</ul>\n",
-							'items'           => [
-								[ 'label' => 'kogenerace', 'url' => [ '/site/page', 'view' => 'kogenerace' ] ],
-								[ 'label' => 'trigenerace', 'url' => [ '/site/page', 'view' => 'trigenerace' ] ],
-								[ 'label' => 'ORC', 'url' => [ '/site/page', 'view' => 'orc' ] ]
-							],
-							'options'         => [
-								'class'          => 'dropdown-button',
-								'data-activates' => 'technologies-menu-items' . $i
-							]
-						],
-						[
-							'label'           => 'služby <i class="material-icons right">arrow_drop_down</i>',
-							'url'             => '#!',
-							'submenuTemplate' => "\n<ul id='services-menu-items" . $i . "' class='dropdown-content'>\n{items}\n</ul>\n",
-							'items'           => [
-								[ 'label' => 'poradenství', 'url' => [ '/site/page', 'view' => 'poradenstvi' ] ],
-								[ 'label' => 'analýza', 'url' => [ '/site/page', 'view' => 'analyza' ] ],
-								[ 'label' => 'realizace', 'url' => [ '/site/page', 'view' => 'realizace' ] ]
-							],
-							'options'         => [
-								'class'          => 'dropdown-button',
-								'data-activates' => 'services-menu-items' . $i
-							]
-						],
-						[ 'label' => 'o nás', 'url' => [ '/site/simple-index' ] ]
-					];
-				}
-				/** @noinspection PhpUndefinedVariableInspection */
-				echo Menu::widget( [
-					'encodeLabels' => false,
-					'options'      => [
-						'class' => 'right hide-on-med-and-down'
-					],
-					'items'        => $items1
-				] );
-				?>
+				); ?>
 			</div>
 		</div>
-		<?= /** @noinspection PhpUndefinedVariableInspection */
-		Menu::widget( [
-			'encodeLabels' => false,
-			'options'      => [
-				'id'    => 'mobile-navigation',
-				'class' => 'side-nav'
-			],
-			'items'        => $items2
-		] ); ?>
 	</nav>
 </header>
 

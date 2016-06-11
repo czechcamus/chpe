@@ -20,9 +20,6 @@ $this->title = 'CHP Engineering';
 			<div class="caption right-align">
 				<h3>Kogenerační jednotky</h3>
 				<h5>Výroba tepla a elektrické energie.</h5>
-				<?= Html::a('<i class="material-icons right">keyboard_arrow_right</i>více informací', '#!', [
-					'class' => 'waves-effect waves-light btn'
-				]); ?>
 			</div>
 		</li>
 		<li>
@@ -32,9 +29,6 @@ $this->title = 'CHP Engineering';
 			<div class="caption center-align">
 				<h3>Trigenerační jednotky</h3>
 				<h5>Výroba tepla, chladu a elektrické energie.</h5>
-				<?= Html::a('<i class="material-icons right">keyboard_arrow_right</i>více informací', '#!', [
-					'class' => 'waves-effect waves-light btn'
-				]); ?>
 			</div>
 		</li>
 		<li>
@@ -44,9 +38,6 @@ $this->title = 'CHP Engineering';
 			<div class="caption left-align">
 				<h3>ORC</h3>
 				<h5>Výroba tepla a elektrické energie prostřednictvím<br />organického Rankinova cyklu.</h5>
-				<?= Html::a('<i class="material-icons right">keyboard_arrow_right</i>více informací', '#!', [
-					'class' => 'waves-effect waves-light btn'
-				]); ?>
 			</div>
 		</li>
 	</ul>
@@ -59,25 +50,16 @@ $this->title = 'CHP Engineering';
 				<i class="material-icons medium">help_outline</i>
 				<h3>Poradenství</h3>
 				<p>Poskytujeme poradenství v oblasti výroby tepla, chladu a elektrické energie.</p>
-				<?= Html::a('více informací', '#!', [
-					'class' => 'waves-effect waves-red btn-flat'
-				]); ?>
 			</div>
 			<div class="col s12 m4">
 				<i class="material-icons medium">blur_circular</i>
 				<h3>Návrh řešení</h3>
 				<p>Provádíme studie a na jejich základě navrhujeme nejvhodnější řešení.</p>
-				<?= Html::a('více informací', '#!', [
-					'class' => 'waves-effect waves-red btn-flat'
-				]); ?>
 			</div>
 			<div class="col s12 m4">
 				<i class="material-icons medium">play_circle_outline</i>
 				<h3>Realizace</h3>
 				<p>Poskytujeme technickou pomoc, dodáváme technologie nebo provádíme realizace na klíč.</p>
-				<?= Html::a('více informací', '#!', [
-					'class' => 'waves-effect waves-red btn-flat'
-				]); ?>
 			</div>
 		</div>
 	</div>

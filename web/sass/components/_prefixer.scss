@@ -58,13 +58,13 @@
 //     -o-animation: $args;
 //     animation: $args;
 // }
-// @mixin animation-delay($delay) {
-//     -webkit-animation-delay: $delay;
-//     -moz-animation-delay: $delay;
-//     -ms-animation-delay: $delay;
-//     -o-animation-delay: $delay;
-//     animation-delay: $delay;
-// }
+ @mixin animation-delay($delay) {
+     -webkit-animation-delay: $delay;
+     -moz-animation-delay: $delay;
+     -ms-animation-delay: $delay;
+     -o-animation-delay: $delay;
+     animation-delay: $delay;
+ }
 // @mixin animation-direction($direction) {
 //     -webkit-animation-direction: $direction;
 //     -moz-animation-direction: $direction;

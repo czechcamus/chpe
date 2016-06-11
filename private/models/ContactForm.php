@@ -2,7 +2,6 @@
 
 namespace app\models;
 
-use Yii;
 use yii\base\Model;
 
 /**
@@ -38,7 +37,11 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'name' => \Yii::t('app', 'name'),
+            'email' => \Yii::t('app', 'email'),
+            'subject' => \Yii::t('app', 'subject'),
+            'body' => \Yii::t('app', 'message'),
+            'verifyCode' => 'Verification Code'
         ];
     }
 
@@ -50,7 +53,7 @@ class ContactForm extends Model
     public function contact($email)
     {
         if ($this->validate()) {
-            Yii::$app->mailer->compose()
+            \Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->subject)

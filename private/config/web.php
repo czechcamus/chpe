@@ -7,9 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'name' => 'CHP Engineering',
     'bootstrap' => ['log'],
+    'language' => 'cs',
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '6ZbzOEHk2JV1u2EPWwYtv2vdpedV0lVF',
         ],
         'cache' => [
@@ -24,9 +24,6 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
         'log' => [
@@ -39,6 +36,18 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'i18n' => [
+	        'translations' => [
+		        'app*' => [
+			        'class' => 'yii\i18n\PhpMessageSource',
+			        'basePath' => '@app/messages',
+			        'fileMap' => [
+				        'app' => 'app.php',
+				        'app/error' => 'error.php',
+			        ],
+		        ],
+	        ],
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,

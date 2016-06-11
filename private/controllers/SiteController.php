@@ -56,6 +56,18 @@ class SiteController extends Controller
         }
         return $this->render('index', compact('model'));
     }
+    
+    public function actionSimpleIndex()
+    {
+        $model = new ContactForm();
+        if ($model->load(\Yii::$app->request->post()) && $model->contact(\Yii::$app->params['adminEmail'])) {
+            \Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+        $this->layout = 'main2';
+        return $this->render('index2', compact('model'));
+    }
 
     public function actionLogin()
     {
