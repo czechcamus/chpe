@@ -132,6 +132,13 @@ main {
   flex: 1 0 auto;
 }
 
+a {
+  color: $secondary-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 address {
   font-style: normal;
 }
@@ -172,6 +179,7 @@ header {
       color: $white-color;
       &:hover {
         color: $secondary-light-color;
+        text-decoration: none;
       }
     }
     * {
@@ -230,6 +238,7 @@ header {
         a {
           color: $secondary-color;
           &:hover {
+            text-decoration: none;
             color: $white-color;
           }
         }
@@ -298,6 +307,12 @@ main {
       margin-bottom: 2rem;
       padding: 0.5rem 1rem;
       background-color: $white-color;
+      strong {
+        font-size: 1.2rem;
+      }
+      .material-icons {
+        vertical-align: middle;
+      }
     }
     .form {
       @include animation-delay(0.3s);
@@ -313,6 +328,7 @@ footer {
   a {
     color: $grey-color;
     &:hover {
+      text-decoration: none;
       color: $black-color;
     }
   }

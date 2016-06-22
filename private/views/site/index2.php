@@ -37,7 +37,7 @@ $this->title = 'CHP Engineering';
 			]); ?>
 			<div class="caption left-align">
 				<h3>ORC</h3>
-				<h5>Výroba tepla a elektrické energie prostřednictvím<br />organického Rankinova cyklu.</h5>
+				<h5>Výroba elektrické energie z tepla prostřednictvím<br />organického Rankinova cyklu.</h5>
 			</div>
 		</li>
 	</ul>
@@ -172,21 +172,24 @@ $this->title = 'CHP Engineering';
 			<div class="col s12 m4 address" style="opacity: 0">
 				<h4>Kontakty</h4>
 				<address>
-					<i class="material-icons left">location_city</i> <strong>CHP Engineering s.r.o.</strong><br />
-					<i class="material-icons left" style="opacity: 0">location_city</i> Voctářova 2436/3c<br />
-					<i class="material-icons left" style="opacity: 0">location_city</i> Praha 8, Libeň<br />
-					<i class="material-icons left" style="opacity: 0">location_city</i> 180 00<br />
-					<i class="material-icons left" style="opacity: 0">public</i> Česká republika
+					<strong>CHP Engineering s.r.o.</strong><br />
+					Voctářova 2436/3c, 180 00 Praha 8, Libeň<br />
+					Česká republika<br /><br />
+					IČ: 04700511, DIČ: CZ04700511<br />
+					Společnost je zapsána u MS v Praze
+					oddíl C, vložka 252311
 				</address>
 				<address>
-					<i class="material-icons left">person</i> <strong>Robert Vít</strong>, jednatel<br />
-					<i class="material-icons left">phone_android</i> +420 111 222 333<br />
-					<i class="material-icons left">email</i> vit@chpe.cz
+					<i class="material-icons">person</i> <strong>Robert Vít</strong>, jednatel<br />
+					<i class="material-icons">phone_android</i>&nbsp;+420 111 222 333 <i class="material-icons">email</i>&nbsp;<a href="mailto:vit@chpe.cz">vit@chpe.cz</a>
 				</address>
 				<address>
-					<i class="material-icons left">person</i> <strong>Igor Bukový</strong>, jednatel<br />
-					<i class="material-icons left">phone_android</i> +420 724 215 772<br />
-					<i class="material-icons left">email</i> bukovy@chpe.cz
+					<i class="material-icons">person</i> <strong>Igor Bukový</strong>, jednatel<br />
+					<i class="material-icons">phone_android</i>&nbsp;+420 724 215 772 <i class="material-icons">email</i>&nbsp;<a href="mailto:bukovy@chpe.cz">bukovy@chpe.cz</a>
+				</address>
+				<address>
+					<i class="material-icons">person</i> <strong>Peter Krčmár</strong>, projektový manažer<br />
+					<i class="material-icons">phone_android</i>&nbsp;+420 775 154 466 <i class="material-icons">email</i>&nbsp;<a href="mailto:krcmar@chpe.cz">krcmar@chpe.cz</a>
 				</address>
 			</div>
 		</div>

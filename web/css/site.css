@@ -3354,7 +3354,7 @@ small {
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #fb0029; }
+    background-color: #fc0029; }
 
 .btn-floating {
   display: inline-block;
@@ -4682,7 +4682,7 @@ input[type=range]:focus::-ms-fill-upper {
     .side-nav a.btn-flat {
       color: #343434; }
     .side-nav a.btn:hover, .side-nav a.btn-large:hover, .side-nav a.btn-large:hover {
-      background-color: #fb0029; }
+      background-color: #fc0029; }
     .side-nav a.btn-floating:hover {
       background-color: #e20025; }
 
@@ -5246,6 +5246,11 @@ body {
 main {
   flex: 1 0 auto; }
 
+a {
+  color: #002e65; }
+  a:hover {
+    text-decoration: underline; }
+
 address {
   font-style: normal; }
 
@@ -5279,7 +5284,8 @@ header {
     header .quick-contacts a {
       color: white; }
       header .quick-contacts a:hover {
-        color: #65abff; }
+        color: #65abff;
+        text-decoration: none; }
     header .quick-contacts * {
       vertical-align: middle; }
   header nav {
@@ -5325,6 +5331,7 @@ header {
       header nav .dropdown-content li a {
         color: #002e65; }
         header nav .dropdown-content li a:hover {
+          text-decoration: none;
           color: white; }
 
 main {
@@ -5380,6 +5387,10 @@ main {
       margin-bottom: 2rem;
       padding: 0.5rem 1rem;
       background-color: white; }
+      main .contacts address strong {
+        font-size: 1.2rem; }
+      main .contacts address .material-icons {
+        vertical-align: middle; }
     main .contacts .form {
       -webkit-animation-delay: 0.3s;
       -moz-animation-delay: 0.3s;
@@ -5398,6 +5409,7 @@ footer {
   footer a {
     color: #9e9e9e; }
     footer a:hover {
+      text-decoration: none;
       color: black; }
 
 #sidenav-overlay {
