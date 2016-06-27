@@ -17,12 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'message from CHPE website' => 'zpráva z webu CHPE',
     'You have really very <strong>old</strong> web browser. Please <a
 	href="http://browsehappy.com/">upgrade</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate
 	Google Chrome Frame</a> for better experience.' => 'Máte opravdu hodně <strong>starý</strong> webový prohlížeč. Prosíme <a href="http://browsehappy.com/">nainstalujte si</a> jeho vyšší verzi nebo <a href="http://www.google.com/chromeframe/?redirect=true">si aktivujte Google Chrome Frame</a> pro lepší zážitky.',
     'email' => 'email',
     'message' => 'zpráva',
     'name' => 'jméno',
-    'subject' => 'předmět',
     'to top' => 'nahoru',
 ];

@@ -11,7 +11,6 @@ class ContactForm extends Model
 {
     public $name;
     public $email;
-    public $subject;
     public $body;
     public $verifyCode;
 
@@ -22,8 +21,8 @@ class ContactForm extends Model
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
+            // name, email and body are required
+            [['name', 'email', 'body'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
@@ -39,7 +38,6 @@ class ContactForm extends Model
         return [
             'name' => \Yii::t('app', 'name'),
             'email' => \Yii::t('app', 'email'),
-            'subject' => \Yii::t('app', 'subject'),
             'body' => \Yii::t('app', 'message'),
             'verifyCode' => 'Verification Code'
         ];
@@ -56,7 +54,7 @@ class ContactForm extends Model
             \Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
-                ->setSubject($this->subject)
+                ->setSubject(\Yii::t('app', 'message from CHPE website'))
                 ->setTextBody($this->body)
                 ->send();
 

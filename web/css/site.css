@@ -5397,6 +5397,8 @@ main {
       -ms-animation-delay: 0.3s;
       -o-animation-delay: 0.3s;
       animation-delay: 0.3s; }
+      main .contacts .form .help-block {
+        color: #e20025; }
     main .contacts .address {
       -webkit-animation-delay: 0.6s;
       -moz-animation-delay: 0.6s;

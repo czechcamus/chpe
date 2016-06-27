@@ -316,6 +316,9 @@ main {
     }
     .form {
       @include animation-delay(0.3s);
+      .help-block {
+        color: $third-color;
+      }
     }
     .address {
       @include animation-delay(0.6s);
