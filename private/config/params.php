@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'adminEmail' => 'ja@camus.cz',
-//    'adminEmail' => 'info@chpe.cz',
+//    'adminEmail' => 'ja@camus.cz',
+    'adminEmail' => 'info@chpe.cz',
 ];
