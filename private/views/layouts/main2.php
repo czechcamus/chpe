@@ -15,7 +15,8 @@ AppAsset::register( $this );
 <head>
 	<meta charset="<?= Yii::$app->charset ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="kogenerace, trigenerace, orc, poradenství, energetika, realizace, analýza">
+	<meta name="keywords" content="chpe, chp engineering, kogenerace, trigenerace, orc, poradenství, energetika, realizace, analýza">
+	<meta name="description" content="Web společnosti CHP Engineering s.r.o.">
 	<?= Html::csrfMetaTags() ?>
 	<title><?= Html::encode( $this->title ) ?></title>
 	<link rel="shortcut icon" href="<?= Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
