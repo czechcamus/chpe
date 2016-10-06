@@ -188,27 +188,42 @@ $this->title = 'CHP Engineering';
 				<?php ActiveForm::end(); ?>
 			</div>
 			<div class="col s12 m4 address" style="opacity: 0">
-				<h4>Kontakty</h4>
-				<address>
-					<strong>CHP Engineering s.r.o.</strong><br />
-					Voctářova 2436/3c, 180 00 Praha 8, Libeň<br />
-					Česká republika<br /><br />
-					IČ: 04700511, DIČ: CZ04700511<br />
-					Společnost je zapsána u MS v Praze
-					oddíl C, vložka 252311
-				</address>
-				<address>
-					<i class="material-icons">person</i> <strong>Robert Vít</strong>, jednatel<br />
-					<i class="material-icons">phone_android</i>&nbsp;+420 111 222 333 <i class="material-icons">email</i>&nbsp;<a href="mailto:vit@chpe.cz">vit@chpe.cz</a>
-				</address>
-				<address>
-					<i class="material-icons">person</i> <strong>Igor Bukový</strong>, jednatel<br />
-					<i class="material-icons">phone_android</i>&nbsp;+420 724 215 772 <i class="material-icons">email</i>&nbsp;<a href="mailto:bukovy@chpe.cz">bukovy@chpe.cz</a>
-				</address>
-				<address>
-					<i class="material-icons">person</i> <strong>Peter Krčmár</strong>, projektový manažer<br />
-					<i class="material-icons">phone_android</i>&nbsp;+420 775 154 466 <i class="material-icons">email</i>&nbsp;<a href="mailto:krcmar@chpe.cz">krcmar@chpe.cz</a>
-				</address>
+				<div class="row">
+					<div class="col s12 l8">
+						<h4>Kontakty</h4>
+						<address>
+							<strong>CHP Engineering s.r.o.</strong><br/>
+							Voctářova 2436/3c, 180 00 Praha 8, Libeň<br/>
+							Česká republika<br/><br/>
+							IČ: 04700511, DIČ: CZ04700511<br/>
+							Společnost je zapsána u MS v Praze
+							oddíl C, vložka 252311
+						</address>
+						<address>
+							<i class="material-icons">person</i> <strong>Robert Vít</strong>, jednatel<br/>
+							<i class="material-icons">phone_android</i>&nbsp;+420 111 222 333 <i class="material-icons">email</i>&nbsp;<a
+								href="mailto:vit@chpe.cz">vit@chpe.cz</a>
+						</address>
+						<address>
+							<i class="material-icons">person</i> <strong>Igor Bukový</strong>, jednatel<br/>
+							<i class="material-icons">phone_android</i>&nbsp;+420 724 215 772 <i class="material-icons">email</i>&nbsp;<a
+								href="mailto:bukovy@chpe.cz">bukovy@chpe.cz</a>
+						</address>
+						<address>
+							<i class="material-icons">person</i> <strong>Peter Krčmár</strong>, projektový manažer<br/>
+							<i class="material-icons">phone_android</i>&nbsp;+420 775 154 466 <i class="material-icons">email</i>&nbsp;<a
+								href="mailto:krcmar@chpe.cz">krcmar@chpe.cz</a>
+						</address>
+					</div>
+					<div class="col s12 l4">
+						<h4>Osvědčení</h4>
+						<?= Html::img( Yii::$app->request->baseUrl . '/img/ostatni/alfalaval_authorized_distributor.jpg', [
+							'alt' => 'osvědčení - autorizovaný distributor společnosti Alfa Laval s.r.o.',
+							'class' => 'responsive-img materialboxed'
+						] ); ?>
+						<p class="center-align">Jsme autorizovaným distributorem společnosti <?= Html::a('Alfa Laval s.r.o.', 'http://www.alfalaval.cz/'); ?></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
